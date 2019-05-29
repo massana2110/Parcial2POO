@@ -23,7 +23,7 @@ public class Gusanito extends Ruedas{
     public void llenarAsientosGusanitos(){
           for (int x = 0; x < capacidad.length; x++) {
             for (int y = 0; y < capacidad[y].length; y++) {
-                capacidad[x][y] = asientoVacio;
+                capacidad[x][y] = !asientoVacio;
             }
           }
     }
@@ -31,39 +31,43 @@ public class Gusanito extends Ruedas{
     public void ingresarPersonas(int numPersonas){
         switch(super.llenarAsiento(numPersonas)){
             case 1:
-               
-                capacidad[0][0] = !asientoVacio;
-                for (int x = 0; x < capacidad.length; x++) {
-                    for (int y = 0; y < capacidad[y].length; y++) {
-                           if (capacidad[x][y] = asientoVacio) {
-                           capacidad[x][y] = !asientoVacio;
-                } 
+                int i=0, j=0;
+              if (capacidad[i][j] != asientoVacio) {
+                  capacidad[i][j] = asientoVacio;
+                 for (i = 0; i < capacidad.length; i++) {
+                   for ( j = 0; j < capacidad[j].length; j++) {
+                       if(capacidad[i][j] = asientoVacio){
+                           capacidad[i+1][i+j] = asientoVacio;
+                       }
                 }
                 }
-                break;
+                }
+              break;
+        
                 
                 case 2: 
-                for (int x = 0; x < capacidad.length; x++) {
-                    for (int y = 0; y < capacidad[y].length; y++) {
-                           if (capacidad[x][y] = asientoVacio) {
-                               int a = x, b = y;
-                          capacidad[a][b] = !asientoVacio;
-                          capacidad[a+1][b+1] = !asientoVacio;
+                for (i = 0; i < capacidad.length; i++) {
+                    for (j = 0; j < capacidad[j].length; j++) {
+                           if (capacidad[i][j] = asientoVacio) {
+                               int a = i, b = j;
+                          capacidad[i][j] = !asientoVacio;
+                          capacidad[i][j] = !asientoVacio;
                 } 
                 }
                 break;
                 
               }
             }
-          }
+    }
+          
     
     
     public void mostrarAsientosGusanito(){
-        for (int x = 0; x < capacidad.length; x++) {
+        for (int i = 0; i < capacidad.length; i++) {
             System.out.print("|");
-            for (int y = 0; y < capacidad[y].length; y++) {
-                System.out.print(capacidad[x][y]);
-                if (y != capacidad.length -1) {
+            for (int j = 0; j < capacidad[j].length; j++) {
+                System.out.print(capacidad[i][j]);
+                if (j != capacidad.length -1) {
                     System.out.print("\t");
                 }
             }
