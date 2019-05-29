@@ -42,7 +42,7 @@ public class Gusanito extends Ruedas{
             for (int y = 0; y < capacidad[y].length; y++) {
                 System.out.println(capacidad[x][y]);
             }
-            System.out.println("\n");   
+            System.out.println("\n");  
         }
     } 
 }
