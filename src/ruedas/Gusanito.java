@@ -29,13 +29,31 @@ public class Gusanito extends Ruedas{
     }
     
     public void ingresarPersonas(int numPersonas){
-       if(super.llenarAsiento(numPersonas) == 1){
-          capacidad[0][0] = false;
-         }else if(super.llenarAsiento(numPersonas) == 2){
-           capacidad[0][0] = false;
-           capacidad[0][1] = false;
-       }
-    }
+        switch(super.llenarAsiento(numPersonas)){
+            case 1:
+                for (int x = 0; x < capacidad.length; x++) {
+                    for (int y = 0; y < capacidad[y].length; y++) {
+                           if (capacidad[x][y] = asientoVacio) {
+                           capacidad[x][y] = !asientoVacio;
+                } 
+                }
+                }
+                break;
+                
+                case 2: 
+                for (int x = 0; x < capacidad.length; x++) {
+                    for (int y = 0; y < capacidad[y].length; y++) {
+                           if (capacidad[x][y] = asientoVacio) {
+                          capacidad[x][y] = !asientoVacio;
+                          capacidad[x+1][y+1] = !asientoVacio;
+                } 
+                }
+                break;
+                
+              }
+            }
+          }
+    
     
     public void mostrarAsientosGusanito(){
         for (int x = 0; x < capacidad.length; x++) {
