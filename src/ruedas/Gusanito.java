@@ -16,6 +16,7 @@ public class Gusanito extends Ruedas{
     public Gusanito(String nombre){
         super(nombre);
         capacidad = new boolean[12][2];
+        
         precioPersona = 3.0;
         asientoVacio = false;
     }
@@ -31,30 +32,42 @@ public class Gusanito extends Ruedas{
     public void ingresarPersonas(int numPersonas){
         switch(super.llenarAsiento(numPersonas)){
             case 1:
-                int i=0, j=0;
-              
-                 for (i = 0; i < capacidad.length; i++) {
-                   for ( j = 0; j < capacidad[j].length; j++) {
-                       if(capacidad[i][j] == asientoVacio){
-                           capacidad[i][j] = !asientoVacio;
-                          
-                       }
-                      capacidad[i][j] = !asientoVacio;
-                }
+                
+               for (int x = 0; x < capacidad.length; x++) {
+             for (int y = 0; y <= capacidad[x].length-1; y++) {
+                           if (capacidad[x][y] == asientoVacio) {
+                                capacidad[x][y] = !asientoVacio;
+                                return;
+                           
+                            }
+                    }
+                    
                 }
               
               break;
         
+            case 2: 
                 
-                case 2: 
-                for (i = 0; i < capacidad.length; i++) {
-                    for (j = 0; j < capacidad[j].length; j++) {
-                           if (capacidad[i][j] != asientoVacio) 
-                          capacidad[i][j] = asientoVacio;
-                          capacidad[i][j] = asientoVacio;
-                } 
+                 for (int x = 0; x < capacidad.length; x++) {
+             for (int y = 0; y < capacidad[x].length; y++) {
+                           if (capacidad[x][y] == asientoVacio) {
+                                capacidad[x][y] =! asientoVacio;
+                                capacidad[x][y+1] =! asientoVacio;
+                                return;
+                            } else if(capacidad[x][y+1] == asientoVacio){
+                                capacidad[x][y+1] =!asientoVacio;
+                                capacidad[x+1][y] = !asientoVacio;
+                                return;
+                            } else if(capacidad[x][y] == !asientoVacio && capacidad[x][y+1] == !asientoVacio){
+                                capacidad[x+1][y] = !asientoVacio;
+                                capacidad[x+1][y+1] = !asientoVacio;
+                                //return;
+                            } 
+                    }
+                    
                 }
-                break;
+              
+              break;
                 
               }
             }

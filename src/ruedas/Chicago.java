@@ -37,4 +37,45 @@ public class Chicago extends Ruedas{
             System.out.println("|");  
         }
     }
+    
+     public void llenarAsientosChicago(){
+          for (int x = 0; x < capacidad.length; x++) {
+            for (int y = 0; y < capacidad[y].length; y++) {
+                capacidad[x][y] = asientoVacio;
+            }
+          }
+    }
+    
+    public void ingresarPersonas(int numPersonas){
+        switch(super.llenarAsiento(numPersonas)){
+            case 1:
+                int i=0, j=0;
+              
+                 for (i = 0; i < capacidad.length; i++) {
+                   for ( j = 0; j < capacidad[j].length; j++) {
+                       if(capacidad[i][j] == asientoVacio){
+                           capacidad[i][j] = !asientoVacio;
+                          
+                       }
+                      capacidad[i][j] = !asientoVacio;
+                }
+                }
+              
+              break;
+        
+                
+                case 2: 
+                for (i = 0; i < capacidad.length; i++) {
+                    for (j = 0; j < capacidad[j].length; j++) {
+                           if (capacidad[i][j] != asientoVacio) 
+                          capacidad[i][j] = asientoVacio;
+                          capacidad[i][j] = asientoVacio;
+                } 
+                }
+                break;
+                
+              }
+            }
+    
+          
 }

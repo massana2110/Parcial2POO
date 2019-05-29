@@ -38,7 +38,7 @@ public class MainClass {
                 opcion = in.nextInt();
                 switch(opcion){
                     case 1:
-                       g.llenarAsientosGusanitos();
+                        System.out.println(g.getCapacidad().length);
         System.out.println("¿Cuantas personas desean subirse(1/2)");
         int opcionPersonas = in.nextInt(); in.nextLine();
         g.ingresarPersonas(opcionPersonas);
