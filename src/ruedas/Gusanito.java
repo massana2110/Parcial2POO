@@ -31,6 +31,8 @@ public class Gusanito extends Ruedas{
     public void ingresarPersonas(int numPersonas){
         switch(super.llenarAsiento(numPersonas)){
             case 1:
+               
+                capacidad[0][0] = !asientoVacio;
                 for (int x = 0; x < capacidad.length; x++) {
                     for (int y = 0; y < capacidad[y].length; y++) {
                            if (capacidad[x][y] = asientoVacio) {
@@ -44,8 +46,9 @@ public class Gusanito extends Ruedas{
                 for (int x = 0; x < capacidad.length; x++) {
                     for (int y = 0; y < capacidad[y].length; y++) {
                            if (capacidad[x][y] = asientoVacio) {
-                          capacidad[x][y] = !asientoVacio;
-                          capacidad[x+1][y+1] = !asientoVacio;
+                               int a = x, b = y;
+                          capacidad[a][b] = !asientoVacio;
+                          capacidad[a+1][b+1] = !asientoVacio;
                 } 
                 }
                 break;
