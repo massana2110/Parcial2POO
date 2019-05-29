@@ -17,7 +17,7 @@ public class Gusanito extends Ruedas{
         super(nombre);
         capacidad = new boolean[12][2];
         precioPersona = 3.0;
-        asientoVacio = true;
+        asientoVacio = false;
     }
     
     public void llenarAsientosGusanitos(){
@@ -32,21 +32,24 @@ public class Gusanito extends Ruedas{
         switch(super.llenarAsiento(numPersonas)){
             case 1:
                 for (int x = 0; x < capacidad.length; x++) {
-                    for (int y = 0; y < capacidad[y].length-1; y++) {
-                           if (capacidad[x][y] = asientoVacio) {
-                           capacidad[x][y] = !asientoVacio;
-                } 
-                }
+                    for (int y = 0; y <= capacidad[x].length-1; y++) {
+                           if (capacidad[x][y] == asientoVacio) {
+                                capacidad[x][y] =! asientoVacio;
+                                break;
+                            } 
+                    }
+                    break;
                 }
                 break;
                 
                 case 2: 
                 for (int x = 0; x < capacidad.length; x++) {
-                    for (int y = 0; y < capacidad[y].length-1; y++) {
-                           if (capacidad[x][y] = asientoVacio) {
+                    for (int y = 0; y <= capacidad[x].length-1; y++) {
+                           if (capacidad[x][y] == asientoVacio) {
                           capacidad[x][y] = !asientoVacio;
-                          capacidad[x+1][y+1] = !asientoVacio;
-                } 
+                          capacidad[x][y+1] = !asientoVacio;
+                          break;
+                        } 
                 }
                 break;
                 

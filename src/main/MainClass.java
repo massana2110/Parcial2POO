@@ -39,7 +39,7 @@ public class MainClass {
                 switch(opcion){
                     case 1:
                         //ESPACIO PARA CODIGO DE INGRESO PARA CADA RUEDA.
-                        g.llenarAsientosGusanitos();
+                        System.out.println(g.getCapacidad().length);
                         System.out.println("¿Cuantas personas desean subirse(1/2)");
                         int opcionPersonas = in.nextInt(); in.nextLine();
                         g.ingresarPersonas(opcionPersonas);
