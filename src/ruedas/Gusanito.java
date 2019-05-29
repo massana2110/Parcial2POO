@@ -13,8 +13,8 @@ package ruedas;
  */
 public class Gusanito extends Ruedas{
 
-    public Gusanito(){
-        nombre = "Gusanito";
+    public Gusanito(String nombre){
+        super(nombre);
         capacidad = new boolean[12][2];
         precioPersona = 3.0;
         asientoVacio = true;
@@ -32,7 +32,7 @@ public class Gusanito extends Ruedas{
         switch(super.llenarAsiento(numPersonas)){
             case 1:
                 for (int x = 0; x < capacidad.length; x++) {
-                    for (int y = 0; y < capacidad[y].length; y++) {
+                    for (int y = 0; y < capacidad[y].length-1; y++) {
                            if (capacidad[x][y] = asientoVacio) {
                            capacidad[x][y] = !asientoVacio;
                 } 
@@ -42,7 +42,7 @@ public class Gusanito extends Ruedas{
                 
                 case 2: 
                 for (int x = 0; x < capacidad.length; x++) {
-                    for (int y = 0; y < capacidad[y].length; y++) {
+                    for (int y = 0; y < capacidad[y].length-1; y++) {
                            if (capacidad[x][y] = asientoVacio) {
                           capacidad[x][y] = !asientoVacio;
                           capacidad[x+1][y+1] = !asientoVacio;
@@ -59,7 +59,12 @@ public class Gusanito extends Ruedas{
         for (int x = 0; x < capacidad.length; x++) {
             System.out.print("|");
             for (int y = 0; y < capacidad[y].length; y++) {
-                System.out.print(capacidad[x][y]);
+                if (capacidad[x][y] != true) {
+                    System.out.print(ANSI_GREEN + capacidad[x][y] + ANSI_RESET);
+                }
+                else{
+                    System.out.print(ANSI_RED + capacidad[x][y] + ANSI_RESET);
+                }
                 if (y != capacidad.length -1) {
                     System.out.print("\t");
                 }
