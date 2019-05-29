@@ -33,4 +33,11 @@ public class Ruedas {
     return numPersonas;
     }
 
+    public boolean[][] getCapacidad(){
+        return capacidad;
+    }
+    
+    public double getPrecioPersona(){
+        return precioPersona;
+    }
 }
