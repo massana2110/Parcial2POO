@@ -20,12 +20,17 @@ public class Ruedas {
     protected double precioPersona;
     protected boolean asientoVacio;
     
-public Ruedas(){
+    //Variables solo para el uso de colores en los metodos de mostrar asiento.
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED = "\u001B[31m";
+    
+    public Ruedas(String nombre){
+        this.nombre = nombre;
+    }
 
-}
-
-public int llenarAsiento(int numPersonas){
+    public int llenarAsiento(int numPersonas){
     return numPersonas;
-}
+    }
 
 }

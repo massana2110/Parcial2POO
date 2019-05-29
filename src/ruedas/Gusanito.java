@@ -13,8 +13,8 @@ package ruedas;
  */
 public class Gusanito extends Ruedas{
 
-    public Gusanito(){
-        nombre = "Gusanito";
+    public Gusanito(String nombre){
+        super(nombre);
         capacidad = new boolean[12][2];
         precioPersona = 3.0;
         asientoVacio = true;
@@ -33,13 +33,19 @@ public class Gusanito extends Ruedas{
             case 1:
                 int i=0, j=0;
               if (capacidad[i][j] != asientoVacio) {
-                  capacidad[i][j] = asientoVacio;
+                 // capacidad[i][j] = asientoVacio;
                  for (i = 0; i < capacidad.length; i++) {
                    for ( j = 0; j < capacidad[j].length; j++) {
-                  
+                       if(capacidad[i][j] != asientoVacio){
+                           capacidad[0][0] = asientoVacio;
+                           if(capacidad[i][j] == asientoVacio){
+                               
+                           }
+                           
+                       }
                 }
                 }
-                }
+              }
               break;
         
                 
