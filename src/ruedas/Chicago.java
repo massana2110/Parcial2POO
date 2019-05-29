@@ -17,6 +17,7 @@ public class Chicago extends Ruedas{
         nombre = "Chicago";
         capacidad = new boolean[24][2];
         precioPersona = 3.0;
+        asientoVacio = true;
     }
     
 }

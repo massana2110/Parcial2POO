@@ -13,4 +13,7 @@ package exceptions;
  */
 public class AtraccionLlenaException extends Exception{
 
+    public AtraccionLlenaException(String mensaje){
+        System.out.println(mensaje);
+    }
 }

@@ -17,5 +17,14 @@ public class Ruedas {
     protected String nombre;
     protected boolean[][] capacidad;
     protected double precioPersona;
+    protected boolean asientoVacio;
     
+public Ruedas(){
+
+}
+
+public int llenarAsiento(int numPersonas){
+    return numPersonas;
+}
+
 }

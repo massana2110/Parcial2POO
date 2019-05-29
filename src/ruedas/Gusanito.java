@@ -17,6 +17,24 @@ public class Gusanito extends Ruedas{
         nombre = "Gusanito";
         capacidad = new boolean[12][2];
         precioPersona = 3.0;
+        asientoVacio = true;
     }
     
+    public void llenarAsientosGusanito(int numPersonas){
+       if(super.llenarAsiento(numPersonas) == 1){
+          capacidad[0][0] = false;
+         }else if(super.llenarAsiento(numPersonas) == 2){
+           capacidad[0][0] = false;
+           capacidad[0][1] = false;
+       }
+    }
+    
+    public void mostrarAsientosGusanito(){
+        for (int x = 0; x < capacidad.length; x++) {
+            for (int y = 0; y < capacidad.length; y++) {
+                System.out.println(capacidad[x][y]);
+            }
+            System.out.println("\n");   
+        }
+    } 
 }

@@ -17,5 +17,8 @@ public class Montania_Rusa extends Ruedas{
         nombre = "Montania Rusa";
         capacidad = new boolean[24][2];
         precioPersona = 5.0;
+        asientoVacio = true;
     }
 }
+
+

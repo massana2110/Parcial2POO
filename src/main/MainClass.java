@@ -8,7 +8,8 @@ package main;
 
 import exceptions.AtraccionLlenaException;
 import exceptions.ParejaNoJuntaException;
-import ruedas.*;
+import ruedas.Gusanito;
+import java.util.Scanner;
 
 /**
  * 
@@ -18,8 +19,15 @@ import ruedas.*;
 
 public class MainClass {
     
-    public static void main(String[] args) {
-        System.out.println("Prueba xd");
+    public static Scanner in;
+    public static void main(String[] args) {}{
+        Gusanito g = new Gusanito();
+        in = new Scanner(System.in);
+        System.out.println("Cuantas personas desean subirse(1/2)");
+        int opcionPersonas = in.nextInt(); in.nextLine();
+        g.llenarAsientosGusanito(opcionPersonas);
+        g.mostrarAsientosGusanito();
+    
     }
     
 }
