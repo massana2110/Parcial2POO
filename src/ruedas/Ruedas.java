@@ -14,6 +14,7 @@ package ruedas;
 
 //Esta es la clase padre
 public class Ruedas {
+    
     protected String nombre;
     protected boolean[][] capacidad;
     protected double precioPersona;

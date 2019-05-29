@@ -22,13 +22,14 @@ public class MainClass {
    
     public static void main(String[] args) {
         Gusanito g = new Gusanito();
+        Montania_Rusa mr = new Montania_Rusa();
         Scanner in = new Scanner(System.in);
         g.llenarAsientosGusanitos();
         System.out.println("¿Cuantas personas desean subirse(1/2)");
         int opcionPersonas = in.nextInt(); in.nextLine();
         g.ingresarPersonas(opcionPersonas);
         g.mostrarAsientosGusanito();
-    
+        mr.mostrarAsientosMontaniaRusa();
     }
     
 }

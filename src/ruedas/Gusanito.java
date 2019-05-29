@@ -57,10 +57,14 @@ public class Gusanito extends Ruedas{
     
     public void mostrarAsientosGusanito(){
         for (int x = 0; x < capacidad.length; x++) {
+            System.out.print("|");
             for (int y = 0; y < capacidad[y].length; y++) {
-                System.out.println(capacidad[x][y]);
+                System.out.print(capacidad[x][y]);
+                if (y != capacidad.length -1) {
+                    System.out.print("\t");
+                }
             }
-            System.out.println("\n");  
+            System.out.println("|");  
         }
     } 
 }
