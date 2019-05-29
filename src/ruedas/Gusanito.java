@@ -36,9 +36,7 @@ public class Gusanito extends Ruedas{
                   capacidad[i][j] = asientoVacio;
                  for (i = 0; i < capacidad.length; i++) {
                    for ( j = 0; j < capacidad[j].length; j++) {
-                       if(capacidad[i][j] = asientoVacio){
-                           capacidad[i+1][i+j] = asientoVacio;
-                       }
+                  
                 }
                 }
                 }
