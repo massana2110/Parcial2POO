@@ -23,7 +23,7 @@ public class MainClass {
     public static void main(String[] args) {}{
         Gusanito g = new Gusanito();
         in = new Scanner(System.in);
-        System.out.println("Cuantas personas desean subirse(1/2)");
+        System.out.println("¿Cuantas personas desean subirse(1/2)");
         int opcionPersonas = in.nextInt(); in.nextLine();
         g.llenarAsientosGusanito(opcionPersonas);
         g.mostrarAsientosGusanito();
