@@ -20,7 +20,14 @@ import java.util.Scanner;
 
 public class MainClass {
     
-   
+    public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
+    public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
+    public static final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    
+    
     public static void main(String[] args) {
         Gusanito g = new Gusanito("Gusanito");
         Montania_Rusa mr = new Montania_Rusa("Montania Rusa");
@@ -116,21 +123,23 @@ public class MainClass {
     }
     
     public static void mainMenu(){
-        System.out.println("\n********* MENU PRINCIPAL **********");
+        System.out.println("");
+        System.out.println(ANSI_BLUE_BACKGROUND + ANSI_YELLOW +  "********* MENU PRINCIPAL **********" + ANSI_RESET);
         System.out.println("1. INGRESO DE PERSONAS.");
         System.out.println("2. MOSTRAR ASIENTO.");
         System.out.println("3. MOSTRAR GANANCIAS.");
         System.out.println("4. SALIR.");
-        System.out.println("********* MENU PRINCIPAL **********");
+        System.out.println(ANSI_BLUE_BACKGROUND + ANSI_YELLOW +  "********* MENU PRINCIPAL **********" + ANSI_RESET);
         System.out.print("INGRESE OPCION: ");
     }
     
     public static void menuRuedas(){
-        System.out.println("\n---------- ATRACCIONES ----------");
+        System.out.println("");
+        System.out.println(ANSI_RED_BACKGROUND + ANSI_YELLOW + "---------- ATRACCIONES ----------" + ANSI_RESET);
         System.out.println("1. RUEDA DE GUSANITO.");
         System.out.println("2. RUEDA DE CHICAGO.");
         System.out.println("3. MONTANIA RUSA.");
-        System.out.println("---------- ATRACCIONES ----------");
+        System.out.println(ANSI_RED_BACKGROUND + ANSI_YELLOW + "---------- ATRACCIONES ----------" + ANSI_RESET);
         System.out.print("INGRESE OPCION: ");
     }
     
@@ -172,10 +181,13 @@ public class MainClass {
         
         gananciaTotal = gananciaGus + gananciaChic + gananciaMont;
         
+        System.out.println("");
+        System.out.println(ANSI_PURPLE_BACKGROUND + "****** GANANCIAS ******" + ANSI_RESET);
         System.out.println("GANANCIA GUSANITO: " + gananciaGus);
         System.out.println("GANANCIA CHICAGO: " + gananciaChic);
         System.out.println("GANANCIA MONTANIA RUSA: " + gananciaMont);
         System.out.println("-----------------------------------------");
         System.out.println("GANANCIA TOTAL:\t" + gananciaTotal);
+        System.out.println(ANSI_PURPLE_BACKGROUND + "****** GANANCIAS ******" + ANSI_RESET);
     }
 }

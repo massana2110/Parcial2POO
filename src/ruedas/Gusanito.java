@@ -54,16 +54,7 @@ public class Gusanito extends Ruedas{
                                 capacidad[x][y] =! asientoVacio;
                                 capacidad[x][y+1] =! asientoVacio;
                                 return;
-                            }if(capacidad[x][y+1] == asientoVacio){
-                                capacidad[x][y+1] = !asientoVacio;
-                                capacidad[x+1][y] = !asientoVacio;
-                                return;
-                            }if(capacidad[x][y] == !asientoVacio && capacidad[x][y+1] == !asientoVacio){
-                                capacidad[x+1][y] = !asientoVacio;
-                                capacidad[x+1][y+1] = !asientoVacio;
-                                return;
-                            } 
-                           return;
+                            }
                     }
                     
                 }
@@ -79,13 +70,18 @@ public class Gusanito extends Ruedas{
     public void mostrarAsientosGusanito(){
         for (int i = 0; i < capacidad.length; i++) {
             System.out.print("|");
-            for (int j = 0; j < capacidad[j].length; j++) {
-                System.out.print(capacidad[i][j]);
+            for (int j = 0; j < capacidad[i].length; j++) {
+                if (capacidad[i][j] != true) {
+                    System.out.print(ANSI_GREEN + capacidad[i][j] + ANSI_RESET);
+                }
+                else{
+                    System.out.print(ANSI_RED + capacidad[i][j] + ANSI_RESET);
+                }
                 if (j != capacidad.length -1) {
                     System.out.print("\t");
                 }
             }
-            System.out.println("|");  
+            System.out.println("|");
         }
     } 
 }
