@@ -6,6 +6,9 @@
 
 package ruedas;
 
+import exceptions.AtraccionLlenaException;
+import exceptions.ParejaNoJuntaException;
+
 /**
  * 
  * @author David Massana 00072416
@@ -29,7 +32,7 @@ public class Gusanito extends Ruedas{
           }
     }
     
-    public void ingresarPersonas(int numPersonas){
+    public void ingresarPersonasGusanito(int numPersonas) throws AtraccionLlenaException, ParejaNoJuntaException{
         switch(super.llenarAsiento(numPersonas)){
             case 1:
                 
@@ -39,7 +42,9 @@ public class Gusanito extends Ruedas{
                                 capacidad[x][y] = !asientoVacio;
                                 return;
                            
-                            }
+                            } if(capacidad[11][1] == !asientoVacio) {
+                              throw new AtraccionLlenaException("¡ATRACCION LLENA, LO SENTIMOS'");
+                      }
                     }
                     
                 }
@@ -48,25 +53,28 @@ public class Gusanito extends Ruedas{
         
             case 2: 
                 
-                 for (int x = 0; x < capacidad.length; x++) {
-             for (int y = 0; y <= capacidad[x].length; y++) {
+                 for (int y = 0; y <= capacidad[y].length; y++) {
+             for (int x = 0; x < capacidad.length; x++) {
                            if (capacidad[x][y] == asientoVacio) {
                                 capacidad[x][y] =! asientoVacio;
-                                capacidad[x][y+1] =! asientoVacio;
+                                capacidad[x][y+1] =! asientoVacio;                                              
                                 return;
-                            }if(capacidad[x][y+1] == asientoVacio){
+                            }if(capacidad[x][y+1] == asientoVacio && capacidad[x][y] == !asientoVacio){
                                 capacidad[x][y+1] = !asientoVacio;
                                 capacidad[x+1][y] = !asientoVacio;
                                 return;
-                            }if(capacidad[x][y] == !asientoVacio && capacidad[x][y+1] == !asientoVacio){
+                            }if(capacidad[x+1][y] == asientoVacio){
                                 capacidad[x+1][y] = !asientoVacio;
                                 capacidad[x+1][y+1] = !asientoVacio;
                                 return;
-                            } 
-                           return;
+                            }if(capacidad[11][1] == !asientoVacio) {
+                              throw new AtraccionLlenaException("¡ATRACCION LLENA, LO SENTIMOS'");
+                      }
+                         
                     }
-                    
+                 
                 }
+                 
               
               break;
                 

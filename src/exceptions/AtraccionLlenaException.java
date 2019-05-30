@@ -11,7 +11,7 @@ package exceptions;
  * @author David Massana 00072416
  * @author Ronald Sanchez 00191018
  */
-public class AtraccionLlenaException extends Exception{
+public class AtraccionLlenaException extends RuntimeException{
 
     public AtraccionLlenaException(String mensaje){
         System.out.println(mensaje);

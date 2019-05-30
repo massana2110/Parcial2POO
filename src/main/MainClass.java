@@ -45,7 +45,7 @@ public class MainClass {
                         System.out.println(g.getCapacidad().length);
                         System.out.println("¿CUANTAS PERSONAS DESEAN SUBIR? (1/2)");
                         int opcionPersonas = in.nextInt(); in.nextLine();
-                        g.ingresarPersonas(opcionPersonas);
+                        g.ingresarPersonasGusanito(opcionPersonas);
                         g.mostrarAsientosGusanito();
                         break;
                         
@@ -105,14 +105,6 @@ public class MainClass {
                 in.nextLine();
             }
         }
-        //TE COMENTE ESTE CODIGO POR SI LO USAS, TU LLENARAS EL CASE 1 DEL SWITCH EN EL INGRESO DE PERSONAS.
-        /*
-        g.llenarAsientosGusanitos();
-        System.out.println("¿Cuantas personas desean subirse(1/2)");
-        int opcionPersonas = in.nextInt(); in.nextLine();
-        g.ingresarPersonas(opcionPersonas);
-        g.mostrarAsientosGusanito();
-        */
     }
     
     public static void mainMenu(){
