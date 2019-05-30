@@ -49,20 +49,21 @@ public class Gusanito extends Ruedas{
             case 2: 
                 
                  for (int x = 0; x < capacidad.length; x++) {
-             for (int y = 0; y < capacidad[x].length; y++) {
+             for (int y = 0; y <= capacidad[x].length; y++) {
                            if (capacidad[x][y] == asientoVacio) {
                                 capacidad[x][y] =! asientoVacio;
                                 capacidad[x][y+1] =! asientoVacio;
                                 return;
-                            } else if(capacidad[x][y+1] == asientoVacio){
-                                capacidad[x][y+1] =!asientoVacio;
+                            }if(capacidad[x][y+1] == asientoVacio){
+                                capacidad[x][y+1] = !asientoVacio;
                                 capacidad[x+1][y] = !asientoVacio;
                                 return;
-                            } else if(capacidad[x][y] == !asientoVacio && capacidad[x][y+1] == !asientoVacio){
+                            }if(capacidad[x][y] == !asientoVacio && capacidad[x][y+1] == !asientoVacio){
                                 capacidad[x+1][y] = !asientoVacio;
                                 capacidad[x+1][y+1] = !asientoVacio;
-                                //return;
+                                return;
                             } 
+                           return;
                     }
                     
                 }

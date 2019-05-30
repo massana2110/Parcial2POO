@@ -38,12 +38,37 @@ public class MainClass {
                 opcion = in.nextInt();
                 switch(opcion){
                     case 1:
+                        menuRuedas();
+                        int opcionRueda = in.nextInt(); in.nextLine();
+                        switch(opcionRueda){
+                            case 1 : 
                         System.out.println(g.getCapacidad().length);
-        System.out.println("¿Cuantas personas desean subirse(1/2)");
-        int opcionPersonas = in.nextInt(); in.nextLine();
-        g.ingresarPersonas(opcionPersonas);
-        g.mostrarAsientosGusanito();
+                        System.out.println("¿CUANTAS PERSONAS DESEAN SUBIR? (1/2)");
+                        int opcionPersonas = in.nextInt(); in.nextLine();
+                        g.ingresarPersonas(opcionPersonas);
+                        g.mostrarAsientosGusanito();
                         break;
+                        
+                            case 2 :
+                        System.out.println(cg.getCapacidad().length);
+                        System.out.println("¿CUANTAS PERSONAS DESEAN SUBIR? (1/2)");
+                        int opcionPersonas2 = in.nextInt(); in.nextLine();        
+                        cg.ingresarPersonasChicago(opcionPersonas2);
+                        cg.mostrarAsientosChicago();
+                                
+                        break;
+                        
+                            case 3:
+                        System.out.println(mr.getCapacidad().length);
+                        System.out.println("¿CUANTAS PERSONAS DESEAN SUBIR? (1/2)");
+                        int opcionPersonas3 = in.nextInt(); in.nextLine();        
+                        mr.ingresarPersonasMontaniaRusa(opcionPersonas3);
+                        mr.mostrarAsientosMontaniaRusa();
+                                
+                        }
+                      
+                        break;
+                        
                     case 2:
                         menuRuedas();
                         opcion = in.nextInt();
