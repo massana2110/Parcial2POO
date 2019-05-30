@@ -82,14 +82,20 @@ public class MainClass {
                         switch(opcion){
                             case 1:
                                 System.out.println("\nDISPOSICION DE ASIENTOS DE RUEDA DE GUSANITO\n");
+                                System.out.println("\n" + ANSI_GREEN_BACKGROUND + "   " + ANSI_RESET + " = DISPONIBLES.");
+                                System.out.println("\n" + ANSI_RED_BACKGROUND + "   " + ANSI_RESET + " = OCUPADOS\n");
                                 g.mostrarAsientosGusanito();
                                 break;
                             case 2:
                                 System.out.println("\nDISPOSICION DE ASIENTOS DE RUEDA DE CHICAGO\n");
+                                System.out.println("\n" + ANSI_GREEN_BACKGROUND + "   " + ANSI_RESET + " = DISPONIBLES.");
+                                System.out.println("\n" + ANSI_RED_BACKGROUND + "   " + ANSI_RESET + " = OCUPADOS\n");
                                 cg.mostrarAsientosChicago();
                                 break;
                             case 3:
                                 System.out.println("\nDISPOSICION DE ASIENTOS DE MONTANIA RUSA\n");
+                                System.out.println("\n" + ANSI_GREEN_BACKGROUND + "   " + ANSI_RESET + " = DISPONIBLES.");
+                                System.out.println("\n" + ANSI_RED_BACKGROUND + "   " + ANSI_RESET + " = OCUPADOS\n");
                                 mr.mostrarAsientosMontaniaRusa();
                                 break;
                             default:
