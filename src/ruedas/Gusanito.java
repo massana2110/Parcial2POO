@@ -40,6 +40,7 @@ public class Gusanito extends Ruedas{
              for (int y = 0; y <= capacidad[x].length-1; y++) {
                            if (capacidad[x][y] == asientoVacio) {
                                 capacidad[x][y] = !asientoVacio;
+                                System.out.println(ANSI_GREEN + "¡PERSONA INGRESADA CORRECTAMENTE!" + ANSI_RESET);
                                 return;
                            
                             } if(capacidad[11][1] == !asientoVacio) {
@@ -57,16 +58,22 @@ public class Gusanito extends Ruedas{
              for (int x = 0; x < capacidad.length; x++) {
                            if (capacidad[x][y] == asientoVacio) {
                                 capacidad[x][y] =! asientoVacio;
-                                capacidad[x][y+1] =! asientoVacio;                                              
+                                capacidad[x][y+1] =! asientoVacio;
+                                System.out.println(ANSI_GREEN + "¡PERSONA INGRESADA CORRECTAMENTE!" + ANSI_RESET);
                                 return;
                             }
+                           if(capacidad[x][y] == !asientoVacio && capacidad[x][y+1] == asientoVacio){
+                               throw new ParejaNoJuntaException("NO PUEDEN SENTARSE JUNTOS :(");
+                           }
                             if(capacidad[x][y+1] == asientoVacio && capacidad[x][y] == !asientoVacio){
                                 capacidad[x][y+1] = !asientoVacio;
                                 capacidad[x+1][y] = !asientoVacio;
+                                System.out.println(ANSI_GREEN + "¡PERSONA INGRESADA CORRECTAMENTE!" + ANSI_RESET);
                                 return;
                             }if(capacidad[x+1][y] == asientoVacio){
                                 capacidad[x+1][y] = !asientoVacio;
                                 capacidad[x+1][y+1] = !asientoVacio;
+                                System.out.println(ANSI_GREEN + "¡PERSONA INGRESADA CORRECTAMENTE!" + ANSI_RESET);
                                 return;
                             }if(capacidad[11][1] == !asientoVacio) {
                               throw new AtraccionLlenaException("¡ATRACCION LLENA, LO SENTIMOS'");
@@ -76,7 +83,9 @@ public class Gusanito extends Ruedas{
                  
                 }
                 break;
-                
+            default:
+                System.out.println(ANSI_RED + "NO PERMITIMOS INGRESAR MAS DE 2 PERSONAS..." + ANSI_RESET);
+                break;
               }
     }
     

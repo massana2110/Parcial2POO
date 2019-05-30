@@ -45,32 +45,33 @@ public class MainClass {
                 opcion = in.nextInt();
                 switch(opcion){
                     case 1:
-                        menuRuedas();
-                        int opcionRueda = in.nextInt(); in.nextLine();
-                        switch(opcionRueda){
-                            case 1 : 
-                            System.out.println("¿CUANTAS PERSONAS DESEAN SUBIR? (1/2)");
-                            int opcionPersonas = in.nextInt(); in.nextLine();
-                            g.ingresarPersonasGusanito(opcionPersonas);
-                            g.mostrarAsientosGusanito();
-                            break;
+                        try{
+                            menuRuedas();
+                            int opcionRueda = in.nextInt(); in.nextLine();
+                            switch(opcionRueda){
+                                case 1 : 
+                                    System.out.println("¿CUANTAS PERSONAS DESEAN SUBIR? (1/2)");
+                                    int opcionPersonas = in.nextInt(); in.nextLine();
+                                    g.ingresarPersonasGusanito(opcionPersonas);
+                                    break;
                         
-                            case 2 :
-                            System.out.println("¿CUANTAS PERSONAS DESEAN SUBIR? (1/2)");
-                            int opcionPersonas2 = in.nextInt(); in.nextLine();        
-                            cg.ingresarPersonasChicago(opcionPersonas2);
-                            cg.mostrarAsientosChicago();
-                                
-                            break;
+                                case 2 :
+                                    System.out.println("¿CUANTAS PERSONAS DESEAN SUBIR? (1/2)");
+                                    int opcionPersonas2 = in.nextInt(); in.nextLine();        
+                                    cg.ingresarPersonasChicago(opcionPersonas2);
+                                    break;
                         
-                            case 3:
+                                case 3:
                         
-                            System.out.println("¿CUANTAS PERSONAS DESEAN SUBIR? (1/2)");
-                            int opcionPersonas3 = in.nextInt(); in.nextLine();        
-                            mr.ingresarPersonasMontaniaRusa(opcionPersonas3);
-                            mr.mostrarAsientosMontaniaRusa();  
+                                    System.out.println("¿CUANTAS PERSONAS DESEAN SUBIR? (1/2)");
+                                    int opcionPersonas3 = in.nextInt(); in.nextLine();        
+                                    mr.ingresarPersonasMontaniaRusa(opcionPersonas3);
+                            }
+                        }catch(AtraccionLlenaException e){
+                            System.out.println(e.toString());
+                        } catch(ParejaNoJuntaException a){
+                            System.out.println(a.toString());
                         }
-                      
                     break;
                         
                     case 2:
