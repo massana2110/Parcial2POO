@@ -179,11 +179,11 @@ public class MainClass {
         
         System.out.println("");
         System.out.println(ANSI_PURPLE_BACKGROUND + "****** GANANCIAS ******" + ANSI_RESET);
-        System.out.println("GANANCIA GUSANITO: " + gananciaGus);
-        System.out.println("GANANCIA CHICAGO: " + gananciaChic);
-        System.out.println("GANANCIA MONTANIA RUSA: " + gananciaMont);
-        System.out.println("-----------------------------------------");
-        System.out.println("GANANCIA TOTAL:\t" + gananciaTotal);
+        System.out.println("GANANCIA GUSANITO: \t\t$" + gananciaGus);
+        System.out.println("GANANCIA CHICAGO: \t\t$" + gananciaChic);
+        System.out.println("GANANCIA MONTANIA RUSA: \t$" + gananciaMont);
+        System.out.println("------------------------------------");
+        System.out.println("GANANCIA TOTAL:\t\t\t$" + gananciaTotal);
         System.out.println(ANSI_PURPLE_BACKGROUND + "****** GANANCIAS ******" + ANSI_RESET);
     }
 }
