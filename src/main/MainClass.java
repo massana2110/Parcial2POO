@@ -33,6 +33,7 @@ public class MainClass {
         Montania_Rusa mr = new Montania_Rusa("Montania Rusa");
         Chicago cg = new Chicago("Chicago");
         
+        System.out.println("PRUEBA");
         Scanner in = new Scanner(System.in);
         int opcion;
         boolean flag = true;
